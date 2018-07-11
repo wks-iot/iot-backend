@@ -5,3 +5,22 @@ living_room:
     - sensor.livingroom_temperature
     - sensor.livingroom_humidity
     - switch.livingroom_main_light
+    
+house:
+  name: "Dom"
+  control: hidden
+  entities:
+    - binary_sensor.maindoor
+    - automation.wyacz_swiata_o_1
+    
+kitchen:
+  name: "Kuchnia"
+  control: hidden
+  entities:
+    - switch.kitchen_main_light
+
+bathroom:
+  name: "Łazienka"
+  control: hidden
+  entities:
+    - switch.bathroom_main_light

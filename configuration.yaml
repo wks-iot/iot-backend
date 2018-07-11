@@ -87,6 +87,30 @@ switch:
     command_topic: "home/livingroom/lightswitch/set"
     payload_on: "1"
     payload_off: "0"
+  - platform: mqtt
+    unique_id: home_kitchen_main_light
+    name: "Światło"
+    state_topic: "home/kitchen/lightswitch"
+    command_topic: "home/kitchen/lightswitch/set"
+    payload_on: "1"
+    payload_off: "0"    
+  - platform: mqtt
+    unique_id: home_bathroom_main_light
+    name: "Światło"
+    state_topic: "home/bathroom/lightswitch"
+    command_topic: "home/bathroom/lightswitch/set"
+    payload_on: "1"
+    payload_off: "0"
+    
+binary_sensor:
+  - platform: mqtt
+    unique_id: home_livingroom_binary_sensor_maindoor
+    name: "Drzwi"
+    state_topic: "home/maindoor"
+    payload_on: "1"
+    payload_off: "0"
+    qos: 0
+    device_class: door
 
 # Text to speech
 tts:

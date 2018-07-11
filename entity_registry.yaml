@@ -13,3 +13,18 @@ switch.livingroom_main_light:
   name:
   platform: mqtt
   unique_id: home_livingroom_main_light
+switch.bathroom_main_light:
+  config_entry_id:
+  name:
+  platform: mqtt
+  unique_id: home_bathroom_main_light
+switch.kitchen_main_light:
+  config_entry_id:
+  name:
+  platform: mqtt
+  unique_id: home_kitchen_main_light
+binary_sensor.maindoor:
+  config_entry_id:
+  name:
+  platform: mqtt
+  unique_id: home_livingroom_binary_sensor_maindoor
