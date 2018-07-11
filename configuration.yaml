@@ -82,6 +82,16 @@ sensor:
     unique_id: home_livingroom_sensor_humidity
     name: "Wilgotność"
     unit_of_measurement: '%'
+  - platform: mqtt
+    state_topic: "garden/zone1/ground_humidity"
+    unique_id: garden_zone1_ground_humidity
+    name: "Wilgotność gleby"
+    unit_of_measurement: '%'
+  - platform: template
+    sensors:
+      last_run:
+        friendly_name: "Ostatnie uruchomienie"
+        value_template: '{{ (as_timestamp(states.switch.garden_zone1_sprinkler.last_changed)) | timestamp_custom("%A, %d %h %H:%M") }}'
   
 switch:
   - platform: mqtt
@@ -105,6 +115,13 @@ switch:
     command_topic: "home/bathroom/lightswitch/set"
     payload_on: "1"
     payload_off: "0"
+  - platform: mqtt
+    unique_id: garden_zone_1_sprinkler
+    name: "Spryskiwcz"
+    state_topic: "garden/zone1/sprinkler"
+    command_topic: "garden/zone1/sprinkler/set"
+    payload_on: "1"
+    payload_off: "0"
     
 binary_sensor:
   - platform: mqtt
@@ -123,6 +140,15 @@ binary_sensor:
     payload_off: "0"
     qos: 0
     device_class: moving
+
+input_number:
+  garden_zone1_sprinkler_duration:
+    name: "Czas trwania"
+    initial: 10
+    min: 1
+    max: 60
+    step: 1
+    unit_of_measurement: "Minuty"
 
 # Text to speech
 tts:

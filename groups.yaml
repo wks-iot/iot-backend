@@ -1,3 +1,12 @@
+default_view:
+  view: yes
+  icon: mdi:home
+  entities:
+    - group.house
+    - group.living_room
+    - group.kitchen
+    - group.bathroom
+
 living_room:
   name: "Salon"
   control: hidden
@@ -25,3 +34,20 @@ bathroom:
   entities:
     - switch.bathroom_main_light
     - binary_sensor.bathroom_washmachine
+
+garden:
+  name: "Ogród"
+  view: yes
+  icon: mdi:nature
+  control: hidden
+  entities:
+    - group.garden_zone1
+
+garden_zone1:
+  name: "Strefa 1"
+  control: hidden
+  entities:
+    - sensor.last_run
+    - input_number.garden_zone1_sprinkler_duration
+    - sensor.garden_zone1_ground_humidity
+    - switch.garden_zone1_sprinkler

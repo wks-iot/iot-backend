@@ -19,3 +19,13 @@
       data:
         title: "Pranie zakończone"
         message: "Pralka zakończyła pranie."
+- id: turn_off_zone1_sprinkler
+  alias: "Wyłącz spryskiwacz w strefie 1"
+  trigger:
+    - platform: state
+      entity_id: switch.garden_zone1_sprinkler
+      to: 'on'
+  action:
+    - delay: "00:{{ states('input_number.garden_zone1_sprinkler_duration')|int }}:30"
+    - service: switch.turn_off
+      entity_id: switch.garden_zone1_sprinkler

@@ -33,3 +33,13 @@ binary_sensor.bathroom_washmachine:
   name:
   platform: mqtt
   unique_id: home_bathroom_binary_sensor_washmachine
+sensor.garden_zone1_ground_humidity:
+  config_entry_id:
+  name:
+  platform: mqtt
+  unique_id: garden_zone1_ground_humidity
+switch.garden_zone1_sprinkler:
+  config_entry_id:
+  name:
+  platform: mqtt
+  unique_id: garden_zone_1_sprinkler
