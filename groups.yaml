@@ -24,3 +24,4 @@ bathroom:
   control: hidden
   entities:
     - switch.bathroom_main_light
+    - binary_sensor.bathroom_washmachine

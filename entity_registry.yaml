@@ -28,3 +28,8 @@ binary_sensor.maindoor:
   name:
   platform: mqtt
   unique_id: home_livingroom_binary_sensor_maindoor
+binary_sensor.bathroom_washmachine:
+  config_entry_id:
+  name:
+  platform: mqtt
+  unique_id: home_bathroom_binary_sensor_washmachine

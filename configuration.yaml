@@ -28,6 +28,10 @@ panel_iframe:
 mqtt:
   broker: 192.168.1.106
 
+notify:
+  - name: Hassio
+    platform: pushbullet
+    api_key: o.TKzVieNdLRdqjeddv95l4WXgPP52DeT0
 
 # Enables configuration UI
 config:
@@ -111,6 +115,14 @@ binary_sensor:
     payload_off: "0"
     qos: 0
     device_class: door
+  - platform: mqtt
+    unique_id: home_bathroom_binary_sensor_washmachine
+    name: "Pralka"
+    state_topic: "home/bathroom/washmachine"
+    payload_on: "1"
+    payload_off: "0"
+    qos: 0
+    device_class: moving
 
 # Text to speech
 tts:
