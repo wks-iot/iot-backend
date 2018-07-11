@@ -8,3 +8,8 @@ sensor.livingroom_temperature:
   name:
   platform: mqtt
   unique_id: home_livingroom_sensor_temperature
+switch.livingroom_main_light:
+  config_entry_id:
+  name:
+  platform: mqtt
+  unique_id: home_livingroom_main_light

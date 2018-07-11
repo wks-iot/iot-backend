@@ -1,0 +1,7 @@
+living_room:
+  name: "Salon"
+  control: hidden
+  entities:
+    - sensor.livingroom_temperature
+    - sensor.livingroom_humidity
+    - switch.livingroom_main_light
