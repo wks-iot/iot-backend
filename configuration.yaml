@@ -68,6 +68,17 @@ sun:
 # Weather prediction
 sensor:
   - platform: yr
+  - platform: mqtt
+    state_topic: "home/livingroom/temperature"
+    unique_id: home_livingroom_sensor_temperature
+    name: "Temperatura"
+    unit_of_measurement: '°C'
+  - platform: mqtt
+    state_topic: "home/livingroom/humidity"
+    unique_id: home_livingroom_sensor_humidity
+    name: "Wilgotność"
+    unit_of_measurement: '%'
+  
 
 # Text to speech
 tts:

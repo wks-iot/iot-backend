@@ -1,0 +1,10 @@
+sensor.livingroom_humidity:
+  config_entry_id:
+  name:
+  platform: mqtt
+  unique_id: home_livingroom_sensor_humidity
+sensor.livingroom_temperature:
+  config_entry_id:
+  name:
+  platform: mqtt
+  unique_id: home_livingroom_sensor_temperature
